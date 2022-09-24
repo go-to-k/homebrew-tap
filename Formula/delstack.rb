@@ -5,20 +5,20 @@
 class Delstack < Formula
   desc "delstack"
   homepage "https://github.com/go-to-k/delstack"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.2.0/delstack_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "0f15af455d5becdd3446f306908cad129cf57e380e3bed10f9e3b2c5048d1744"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.2.1/delstack_0.2.1_Darwin_x86_64.tar.gz"
+      sha256 "497d6e840c1015c6c914034eeff4e7fdfe483cd58d18ebd8ac6a61b63885d0aa"
 
       def install
         bin.install "delstack"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.2.0/delstack_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "6596e1c059544762a5aec7bea56e9937147b419a9c4a3949c06765aad82d1c3c"
+    if Hardware::CPU.arm?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.2.1/delstack_0.2.1_Darwin_arm64.tar.gz"
+      sha256 "8a53a0d694060d2266e0d0813838bcc6ddca714b7710d47ac91684baaa21fd35"
 
       def install
         bin.install "delstack"
@@ -28,16 +28,16 @@ class Delstack < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.2.0/delstack_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "0e1849640f7979b199451c68478d6b791354210863eb4e1a15e8484eb81c8f29"
+      url "https://github.com/go-to-k/delstack/releases/download/v0.2.1/delstack_0.2.1_Linux_x86_64.tar.gz"
+      sha256 "796badf0ab775dcf6aae7fb8b1b81635ca8101880171330d9a9d0edcc4fbde0a"
 
       def install
         bin.install "delstack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.2.0/delstack_0.2.0_Linux_arm64.tar.gz"
-      sha256 "a69d427da7d0070dd0c4973ea64187cc7b273e2c611b73e436b6679211bc5cf5"
+      url "https://github.com/go-to-k/delstack/releases/download/v0.2.1/delstack_0.2.1_Linux_arm64.tar.gz"
+      sha256 "18647739aa5271370c1fc7651a4df5d38fde0182b0918a89329798db7aaef0e5"
 
       def install
         bin.install "delstack"
