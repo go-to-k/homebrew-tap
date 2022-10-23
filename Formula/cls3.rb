@@ -5,20 +5,20 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Darwin_x86_64.tar.gz"
-      sha256 "0858a2fd38fc602fd52bd4a5977c29fea8291eaebf3a9ed32732806d37ef5cfc"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.4/cls3_0.0.4_Darwin_x86_64.tar.gz"
+      sha256 "3ef549818831894ab0311572002ad2f7733430f8e41b13491dbc4f44e0ff678b"
 
       def install
         bin.install "cls3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Darwin_arm64.tar.gz"
-      sha256 "423480027af0d10d799a1c3238a9251637dc642bcdf4602319f4b8c7ee5cc9e1"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.4/cls3_0.0.4_Darwin_arm64.tar.gz"
+      sha256 "79b3d1650d7c359581d1656d0926049f035d85ca31b0ca1b0bc32b6c573c6a55"
 
       def install
         bin.install "cls3"
@@ -28,16 +28,16 @@ class Cls3 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Linux_arm64.tar.gz"
-      sha256 "4802c8a80d445bf9f44ba6a60c91db1dc8bb6804edf7cee1c689c8bfabf1af25"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.4/cls3_0.0.4_Linux_arm64.tar.gz"
+      sha256 "61357721eb09649ffb20609cf878a1589a84cc3e1708fa57fc7a81b4eae72c32"
 
       def install
         bin.install "cls3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Linux_x86_64.tar.gz"
-      sha256 "d78c16708d0991e81def9ff8994e39c22716b059c3e35173e1cb04b527deb374"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.4/cls3_0.0.4_Linux_x86_64.tar.gz"
+      sha256 "9361115078c51316d6bce89d3bacc46b8da78ca7c4a76afaacdc1e1baeb8c2f8"
 
       def install
         bin.install "cls3"
