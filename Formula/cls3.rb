@@ -5,20 +5,20 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.2/cls3_0.0.2_Darwin_x86_64.tar.gz"
-      sha256 "8240472a2c60432b8d219b93d100e4f3eef3f753bbabefec1cbc097f66ed9def"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Darwin_x86_64.tar.gz"
+      sha256 "0858a2fd38fc602fd52bd4a5977c29fea8291eaebf3a9ed32732806d37ef5cfc"
 
       def install
         bin.install "cls3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.2/cls3_0.0.2_Darwin_arm64.tar.gz"
-      sha256 "7e8fdacafb0d12670656817499eaaa1a669bc4582c6dad2d112cb61a9d0d3143"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Darwin_arm64.tar.gz"
+      sha256 "423480027af0d10d799a1c3238a9251637dc642bcdf4602319f4b8c7ee5cc9e1"
 
       def install
         bin.install "cls3"
@@ -27,17 +27,17 @@ class Cls3 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.2/cls3_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "75c363dadba524fa62d930000b4a828c2cce6cf3c93463f7c755fcc980dd8fcb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Linux_arm64.tar.gz"
+      sha256 "4802c8a80d445bf9f44ba6a60c91db1dc8bb6804edf7cee1c689c8bfabf1af25"
 
       def install
         bin.install "cls3"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.0.2/cls3_0.0.2_Linux_arm64.tar.gz"
-      sha256 "5d4864247f3a20248eb0f2471eea5b132660b6edddb2f31d98829569f5d363ee"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/cls3/releases/download/v0.0.3/cls3_0.0.3_Linux_x86_64.tar.gz"
+      sha256 "d78c16708d0991e81def9ff8994e39c22716b059c3e35173e1cb04b527deb374"
 
       def install
         bin.install "cls3"
