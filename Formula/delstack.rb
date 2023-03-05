@@ -8,17 +8,17 @@ class Delstack < Formula
   version "0.10.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.10.0/delstack_0.10.0_Darwin_x86_64.tar.gz"
-      sha256 "9aee451a62a293fd7b936b83116de0c85ecb217e89470ddce4ce37b34d39c9eb"
+    if Hardware::CPU.arm?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.10.0/delstack_0.10.0_Darwin_arm64.tar.gz"
+      sha256 "d4e5dd346138927226793031587e77054bd6b61e018723d1df6407acfd2e56b1"
 
       def install
         bin.install "delstack"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.10.0/delstack_0.10.0_Darwin_arm64.tar.gz"
-      sha256 "1badbd226bfc2bfa64335fbefba8da41c1496e36ef2ecec9e12d5035f0b3e5e1"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.10.0/delstack_0.10.0_Darwin_x86_64.tar.gz"
+      sha256 "d4947f01e8f74902a2bcf77da503077983561cbb05dfb122e3a474f379298b12"
 
       def install
         bin.install "delstack"
@@ -29,7 +29,7 @@ class Delstack < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/go-to-k/delstack/releases/download/v0.10.0/delstack_0.10.0_Linux_x86_64.tar.gz"
-      sha256 "8c04ffb6f5f3de9afba738b804df46b5c9f83acd3e740aad943b907630aaae14"
+      sha256 "283f0403ae4cfd33a299f65197cfd782eabf100f43125d630f4d466780a9c5c3"
 
       def install
         bin.install "delstack"
@@ -37,7 +37,7 @@ class Delstack < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/go-to-k/delstack/releases/download/v0.10.0/delstack_0.10.0_Linux_arm64.tar.gz"
-      sha256 "fe057b8955b88aaac6170fb465db843a664a66a55ac82a14878d103a48acdc99"
+      sha256 "cc1c1174a2a4133ead570ed1b5a57b97df79fcf99706f6d5ff43c819b9127639"
 
       def install
         bin.install "delstack"
