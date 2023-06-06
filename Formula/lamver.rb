@@ -5,20 +5,20 @@
 class Lamver < Formula
   desc "lamver"
   homepage "https://github.com/go-to-k/lamver"
-  version "0.2.1"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.2.1/lamver_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "99fa170f0092d2911767a5e072ea6edf063acc54ea38f6d45cd98b9c7aa979c1"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.3.0/lamver_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "d4b2fc5991f71420c481b57ed6ea07f4e6a809067455d63b805f7197c2a152b2"
 
       def install
         bin.install "lamver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.2.1/lamver_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "f3ac7e1f76dd95586b87f9ae1e62df6770dbc1072fc5b86d671e398f2e88d70d"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.3.0/lamver_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "b34e3ced10d802a37a1b916e3d509b88844dad3a8895fc05a3b7161635deecdd"
 
       def install
         bin.install "lamver"
@@ -28,16 +28,16 @@ class Lamver < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.2.1/lamver_0.2.1_Linux_arm64.tar.gz"
-      sha256 "523fd35b4bbeb5b6fd37401986b63280abba25fba7bc3321b1f939bfa7f55a0e"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.3.0/lamver_0.3.0_Linux_arm64.tar.gz"
+      sha256 "fac66088ccc8c1c894d6b6999ae368779c7707f6c51c6d48174e2126a8f91512"
 
       def install
         bin.install "lamver"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.2.1/lamver_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "33eb7f220af50f8d0ae6d34a369ba52f16cc608ecf424a81e13dc2980d8ee562"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.3.0/lamver_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "07210528b3bb6a71984bb20c9b469a12ce9551d9710f96de88d96c19143eedbc"
 
       def install
         bin.install "lamver"
