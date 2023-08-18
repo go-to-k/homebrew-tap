@@ -5,20 +5,20 @@
 class Delstack < Formula
   desc "delstack"
   homepage "https://github.com/go-to-k/delstack"
-  version "0.13.4"
+  version "0.14.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.13.4/delstack_0.13.4_Darwin_x86_64.tar.gz"
-      sha256 "d613894747fdaaad67e98cd7fb98c9a1cecdc8dd0b8f11b268af40afec6f2f55"
+    if Hardware::CPU.arm?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Darwin_arm64.tar.gz"
+      sha256 "7c0081e07f7161e302452e2501cb9ef0afce2ce008380f6622bf0db5fecb7860"
 
       def install
         bin.install "delstack"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.13.4/delstack_0.13.4_Darwin_arm64.tar.gz"
-      sha256 "5015fd356c0d95cccd63692d8a5df7d781374a468c6811340994921b2460bfd3"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Darwin_x86_64.tar.gz"
+      sha256 "ff53c5c09fdff52738feff55d7888d2413651be9698e2f2169a82e172a5cc146"
 
       def install
         bin.install "delstack"
@@ -27,17 +27,17 @@ class Delstack < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.13.4/delstack_0.13.4_Linux_x86_64.tar.gz"
-      sha256 "98200f4dd896f256c9731c43b4d835bbd82ed8f11e2b3f769d582a26a738bdbd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Linux_arm64.tar.gz"
+      sha256 "66f933c7d744565afcb0dee09e040ecd83d3a4046c53248006b9117ad474818b"
 
       def install
         bin.install "delstack"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.13.4/delstack_0.13.4_Linux_arm64.tar.gz"
-      sha256 "51c3b0d546207c87c837367c0388e6017a4e5a286524117b91097e2a8e029a41"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Linux_x86_64.tar.gz"
+      sha256 "9d7a6f686ec5ef8b75febd29b640c1fed4fc20be1ce58efa69b49f884b85e170"
 
       def install
         bin.install "delstack"
