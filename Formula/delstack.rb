@@ -5,20 +5,20 @@
 class Delstack < Formula
   desc "delstack"
   homepage "https://github.com/go-to-k/delstack"
-  version "0.14.0"
+  version "0.14.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Darwin_arm64.tar.gz"
-      sha256 "7c0081e07f7161e302452e2501cb9ef0afce2ce008380f6622bf0db5fecb7860"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.1/delstack_0.14.1_Darwin_x86_64.tar.gz"
+      sha256 "963f237ad8b3fdcf3b7f97a63de0228aa7d9d9e40f9238b4e5e323b5ef510a3a"
 
       def install
         bin.install "delstack"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Darwin_x86_64.tar.gz"
-      sha256 "ff53c5c09fdff52738feff55d7888d2413651be9698e2f2169a82e172a5cc146"
+    if Hardware::CPU.arm?
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.1/delstack_0.14.1_Darwin_arm64.tar.gz"
+      sha256 "7959828b53fda8041319a73e0855e2f4d84d547a59388e88c88a1eda74d0f7a7"
 
       def install
         bin.install "delstack"
@@ -28,16 +28,16 @@ class Delstack < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Linux_arm64.tar.gz"
-      sha256 "66f933c7d744565afcb0dee09e040ecd83d3a4046c53248006b9117ad474818b"
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.1/delstack_0.14.1_Linux_arm64.tar.gz"
+      sha256 "a1e44518f31bcfdbf29ba11875a6590162d2ccb3fec23ae61b50fc4822dda8dc"
 
       def install
         bin.install "delstack"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v0.14.0/delstack_0.14.0_Linux_x86_64.tar.gz"
-      sha256 "9d7a6f686ec5ef8b75febd29b640c1fed4fc20be1ce58efa69b49f884b85e170"
+      url "https://github.com/go-to-k/delstack/releases/download/v0.14.1/delstack_0.14.1_Linux_x86_64.tar.gz"
+      sha256 "3473b62a8d715c6ede35424f48ca99b4af970530200588342df466bc9b36ec77"
 
       def install
         bin.install "delstack"
