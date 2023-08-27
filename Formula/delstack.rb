@@ -5,20 +5,20 @@
 class Delstack < Formula
   desc "delstack"
   homepage "https://github.com/go-to-k/delstack"
-  version "1.0.2"
+  version "1.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/delstack/releases/download/v1.0.2/delstack_1.0.2_Darwin_arm64.tar.gz"
-      sha256 "13004f150420a7a29d1e535ba3e870754f43a917f515877e28eab41ede2542f5"
+      url "https://github.com/go-to-k/delstack/releases/download/v1.0.3/delstack_1.0.3_Darwin_arm64.tar.gz"
+      sha256 "2c4396e3e5634523e3d0798706e7524604ef18096a8bfed36984d5efede9ea47"
 
       def install
         bin.install "delstack"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v1.0.2/delstack_1.0.2_Darwin_x86_64.tar.gz"
-      sha256 "33c1a0d38bb282fd55adbfaad342fb44cd62432fd5b631ef8fe9ec440eaf2eab"
+      url "https://github.com/go-to-k/delstack/releases/download/v1.0.3/delstack_1.0.3_Darwin_x86_64.tar.gz"
+      sha256 "487b7a4cc55d991ea78de84ecc69b674297c2aef8fe5afa53459fc587ca7a858"
 
       def install
         bin.install "delstack"
@@ -27,17 +27,17 @@ class Delstack < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v1.0.2/delstack_1.0.2_Linux_x86_64.tar.gz"
-      sha256 "d281250ab2ecf06e0e33a77e0dbb32eda9b9d945a22ebf13e8aefe06ec3f514e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/delstack/releases/download/v1.0.3/delstack_1.0.3_Linux_arm64.tar.gz"
+      sha256 "e3e3299eb912c094b0a9e6ea6f6b4714a9404c22e39f5f8cee2626346d4ca2f2"
 
       def install
         bin.install "delstack"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v1.0.2/delstack_1.0.2_Linux_arm64.tar.gz"
-      sha256 "ca7c044220564817e62d381375dc548b8e5632dba9f01a88451d6f379902eca0"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/delstack/releases/download/v1.0.3/delstack_1.0.3_Linux_x86_64.tar.gz"
+      sha256 "acc86a35f6e0cd961375b1ba753a20dbc3e9cab6cd916084080649df26babfa5"
 
       def install
         bin.install "delstack"
