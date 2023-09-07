@@ -5,20 +5,20 @@
 class Lamver < Formula
   desc "lamver"
   homepage "https://github.com/go-to-k/lamver"
-  version "0.4.2"
+  version "0.5.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.4.2/lamver_0.4.2_Darwin_arm64.tar.gz"
-      sha256 "4ecfd32476806e4eeb23b75fb5c10d33e40234378ae0123e665fdf0182e4db1f"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.5.0/lamver_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "c29878e25a6d8f604bfde394f3c1ae8295f5f02e7805f033f0b0aecdb9974b98"
 
       def install
         bin.install "lamver"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.4.2/lamver_0.4.2_Darwin_x86_64.tar.gz"
-      sha256 "3597c87fa18a8b4a1152f66b5a14438f8184800743d2f74a5375bd40be46001a"
+    if Hardware::CPU.arm?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.5.0/lamver_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "ceb5c9b46c91f42ab5c28411c9b88d94e18b5032f568be37be62bffde8037311"
 
       def install
         bin.install "lamver"
@@ -27,17 +27,17 @@ class Lamver < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.4.2/lamver_0.4.2_Linux_arm64.tar.gz"
-      sha256 "72db4c47ed42f6d83da19aedb3a5225b4a291a972df9f90214a53b5d99cbd7fa"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.5.0/lamver_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "a53361409fcdb5320a0d95f3c271cfc4799521618db20a5aa004543c06c7d0f7"
 
       def install
         bin.install "lamver"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.4.2/lamver_0.4.2_Linux_x86_64.tar.gz"
-      sha256 "8141a71960e45f894ce52fa8e402abe2ca08935966974a123b66ebad1fa3f611"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.5.0/lamver_0.5.0_Linux_arm64.tar.gz"
+      sha256 "29872734a22495093232ad4eb3c4440d3c42e29a84b149975b3b977265971ec5"
 
       def install
         bin.install "lamver"
