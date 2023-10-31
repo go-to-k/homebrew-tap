@@ -5,20 +5,20 @@
 class Lamver < Formula
   desc "lamver"
   homepage "https://github.com/go-to-k/lamver"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.6.0/lamver_0.6.0_Darwin_x86_64.tar.gz"
-      sha256 "b1c490fe24d511a732bb6f5bed2e13e3245bccaff08285284975aa6a087d92ac"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.6.1/lamver_0.6.1_Darwin_x86_64.tar.gz"
+      sha256 "7347d2f63ff322e0b90a14de06b456ddfde35539e15b158630563e9bb7a76b3c"
 
       def install
         bin.install "lamver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.6.0/lamver_0.6.0_Darwin_arm64.tar.gz"
-      sha256 "97cfc2c67f9f6017b30c7fb38d24ee4801c49fdf5f667b316af67103778450a0"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.6.1/lamver_0.6.1_Darwin_arm64.tar.gz"
+      sha256 "8d3087f24fb5339aee9d0b2eff68237bc9ed5129d8fc3ad08927b2c32a26e9ba"
 
       def install
         bin.install "lamver"
@@ -27,17 +27,17 @@ class Lamver < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.6.0/lamver_0.6.0_Linux_arm64.tar.gz"
-      sha256 "cb4e1ed4b573ea1500856713fbe9741b65da1d9878db55fc1705378863a8bd04"
+    if Hardware::CPU.intel?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.6.1/lamver_0.6.1_Linux_x86_64.tar.gz"
+      sha256 "d70010bd48b71644fcd715b550ab4e64c0543cee9def5875abe786ff83edb578"
 
       def install
         bin.install "lamver"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.6.0/lamver_0.6.0_Linux_x86_64.tar.gz"
-      sha256 "84dcf4cf1d55b47bfabf46069254be15134e87af4be617235e22b7d7ecc0a7d9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.6.1/lamver_0.6.1_Linux_arm64.tar.gz"
+      sha256 "97314d692ccefd8cd9678504d7a9c1298338da24e34298641dad57bb7e675ade"
 
       def install
         bin.install "lamver"
