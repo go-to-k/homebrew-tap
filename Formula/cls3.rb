@@ -5,20 +5,20 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.13.0"
+  version "0.13.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.13.0/cls3_0.13.0_Darwin_arm64.tar.gz"
-      sha256 "530421fedd4063bf9bc4462cca6c6b00aa5c2a5aa90dfc88254404f8993d9fc1"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.13.1/cls3_0.13.1_Darwin_arm64.tar.gz"
+      sha256 "0933c84cf34a241a3a8029825588d5cb242e18386f70f3a88471e70753f83a37"
 
       def install
         bin.install "cls3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.13.0/cls3_0.13.0_Darwin_x86_64.tar.gz"
-      sha256 "21392490c0d72c1e806ff2c3d1f2a47162232835b485715fbe6055aebe631f87"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.13.1/cls3_0.13.1_Darwin_x86_64.tar.gz"
+      sha256 "85738236a2031f20cd1d2187a33c7f31e62bb68797f399a4a4c6b79eb72b42bd"
 
       def install
         bin.install "cls3"
@@ -28,16 +28,16 @@ class Cls3 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.13.0/cls3_0.13.0_Linux_arm64.tar.gz"
-      sha256 "94021e8d56fe27b2804497af1c80110c9e3b5b5f260853b63343503ab8338b67"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.13.1/cls3_0.13.1_Linux_arm64.tar.gz"
+      sha256 "d294783e3628d21d43537f4c6a6a8b1c82dab69595f807b54b0f67af10ea58e2"
 
       def install
         bin.install "cls3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.13.0/cls3_0.13.0_Linux_x86_64.tar.gz"
-      sha256 "0c69e34a86ecc0b516462f2fd28c452440e8a58601087048a5895d284d8ec345"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.13.1/cls3_0.13.1_Linux_x86_64.tar.gz"
+      sha256 "3cf157676fdde86e1fdcd0cc608f982963eef2e7b6c862f1a1d1d208e5bbb89b"
 
       def install
         bin.install "cls3"
