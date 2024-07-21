@@ -5,20 +5,20 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.16.0"
+  version "0.17.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.16.0/cls3_0.16.0_Darwin_x86_64.tar.gz"
-      sha256 "63704c907cd9c78c940e2fda1cdd4a8c91e1c3e368a0069627ea1a1c3941ce96"
+    on_intel do
+      url "https://github.com/go-to-k/cls3/releases/download/v0.17.0/cls3_0.17.0_Darwin_x86_64.tar.gz"
+      sha256 "9be130d6f0126cacff9ebaff66ca6f14f9a4cf379e6bca497419803571a471f0"
 
       def install
         bin.install "cls3"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.16.0/cls3_0.16.0_Darwin_arm64.tar.gz"
-      sha256 "603b35f316cb14881bec5195828c2c186d8ad08e38043b2c2db98c95999ddb44"
+    on_arm do
+      url "https://github.com/go-to-k/cls3/releases/download/v0.17.0/cls3_0.17.0_Darwin_arm64.tar.gz"
+      sha256 "7b168eb383914ddb4fd4e9d7c7135423e689994ab744b5c32e70a47e7121de11"
 
       def install
         bin.install "cls3"
@@ -27,20 +27,24 @@ class Cls3 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.16.0/cls3_0.16.0_Linux_x86_64.tar.gz"
-      sha256 "4e3a10dbdd3f6120b00227bd5a516ff5d95da2cb91ffbd5274b8f282026eb138"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/go-to-k/cls3/releases/download/v0.17.0/cls3_0.17.0_Linux_x86_64.tar.gz"
+        sha256 "ba6706643168988427cc98272bc2e0e3e35ba3cc7da87092fe3fc6b1766e4361"
 
-      def install
-        bin.install "cls3"
+        def install
+          bin.install "cls3"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.16.0/cls3_0.16.0_Linux_arm64.tar.gz"
-      sha256 "fffdf790c2c6f0b013afef4140c21fd15a7412ed06bee40618bfcac928d7b3d7"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/go-to-k/cls3/releases/download/v0.17.0/cls3_0.17.0_Linux_arm64.tar.gz"
+        sha256 "aac7d11abbc0d3edae045bbb712e3a5d32755a4b27bbd39c6eef568c3881ef3c"
 
-      def install
-        bin.install "cls3"
+        def install
+          bin.install "cls3"
+        end
       end
     end
   end
