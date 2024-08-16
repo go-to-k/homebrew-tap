@@ -5,20 +5,20 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.20.3"
+  version "0.20.4"
 
   on_macos do
     on_intel do
-      url "https://github.com/go-to-k/cls3/releases/download/v0.20.3/cls3_0.20.3_Darwin_x86_64.tar.gz"
-      sha256 "ea6662e4a2708a2a451079a0b1138806e4609ef1b15943f88274758c82d45030"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.20.4/cls3_0.20.4_Darwin_x86_64.tar.gz"
+      sha256 "471a58041ae819439809be316cc36808ac122c8f4af8b2db08caeeae6c740e9e"
 
       def install
         bin.install "cls3"
       end
     end
     on_arm do
-      url "https://github.com/go-to-k/cls3/releases/download/v0.20.3/cls3_0.20.3_Darwin_arm64.tar.gz"
-      sha256 "d3c0ba788960f3d4e4300a830dede2ef969c9f8bfb4b989d8b872e3f632c1136"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.20.4/cls3_0.20.4_Darwin_arm64.tar.gz"
+      sha256 "806834aac3b33d406d4fac0ec11c20fc4fc83a1f3cb235a8b565276da8a558f9"
 
       def install
         bin.install "cls3"
@@ -29,8 +29,8 @@ class Cls3 < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/cls3/releases/download/v0.20.3/cls3_0.20.3_Linux_x86_64.tar.gz"
-        sha256 "b0f12738034b44fcc568d0d93dfbc70a77a4f3edc939f693a60e66bab9488aae"
+        url "https://github.com/go-to-k/cls3/releases/download/v0.20.4/cls3_0.20.4_Linux_x86_64.tar.gz"
+        sha256 "8ab86cf6c8679acfc1b7a9a8f474753276f3e2743fee4faa9e9ff11fc2e9e550"
 
         def install
           bin.install "cls3"
@@ -39,8 +39,8 @@ class Cls3 < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/cls3/releases/download/v0.20.3/cls3_0.20.3_Linux_arm64.tar.gz"
-        sha256 "15c87edaee9c3564a9da75841975cc0dc04306be66b5af9b4d27f1c398ac9bd9"
+        url "https://github.com/go-to-k/cls3/releases/download/v0.20.4/cls3_0.20.4_Linux_arm64.tar.gz"
+        sha256 "07348aab9d0cd4e0364a249f391c69622c995760b1242c704b4deb0d4c71bf01"
 
         def install
           bin.install "cls3"
