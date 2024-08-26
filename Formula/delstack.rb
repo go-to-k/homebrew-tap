@@ -5,20 +5,20 @@
 class Delstack < Formula
   desc "delstack"
   homepage "https://github.com/go-to-k/delstack"
-  version "1.13.3"
+  version "1.14.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/go-to-k/delstack/releases/download/v1.13.3/delstack_1.13.3_Darwin_x86_64.tar.gz"
-      sha256 "7b0a1cb1a896f65826264fffefd947ed4a20cbee0e89bfa547d55e574a5aee23"
+      url "https://github.com/go-to-k/delstack/releases/download/v1.14.0/delstack_1.14.0_Darwin_x86_64.tar.gz"
+      sha256 "58bb8f6f1ab2d32fa73bdd1314028467f7eace5a83e52c26125c7de0e0380e0a"
 
       def install
         bin.install "delstack"
       end
     end
     on_arm do
-      url "https://github.com/go-to-k/delstack/releases/download/v1.13.3/delstack_1.13.3_Darwin_arm64.tar.gz"
-      sha256 "067aa90eb77f35ef4c5791f540a70974fc9281cd8cd84d699ff3d6db05261d8d"
+      url "https://github.com/go-to-k/delstack/releases/download/v1.14.0/delstack_1.14.0_Darwin_arm64.tar.gz"
+      sha256 "39a12db5a8bbecd7562a193ccebe580d5550b97a90baf38c53a0a48dcc9d7df5"
 
       def install
         bin.install "delstack"
@@ -29,8 +29,8 @@ class Delstack < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/delstack/releases/download/v1.13.3/delstack_1.13.3_Linux_x86_64.tar.gz"
-        sha256 "033c0ec139b4151fc848b4d5f034b077e1d26c0cfb2344e23fb64b7810ebace4"
+        url "https://github.com/go-to-k/delstack/releases/download/v1.14.0/delstack_1.14.0_Linux_x86_64.tar.gz"
+        sha256 "b8aa88f2a0a0a3f99addc6c3d2002152520f286576f64ccddf21592f724ccde2"
 
         def install
           bin.install "delstack"
@@ -39,8 +39,8 @@ class Delstack < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/delstack/releases/download/v1.13.3/delstack_1.13.3_Linux_arm64.tar.gz"
-        sha256 "b42f1957fcfca0ac273b8448d083db06c8ffd6023a0521689b034997b2865944"
+        url "https://github.com/go-to-k/delstack/releases/download/v1.14.0/delstack_1.14.0_Linux_arm64.tar.gz"
+        sha256 "c50210cc85e4bbeb57e3e82b69f3a42dfbeae6bb17995bdfcdc92a2602ddcf08"
 
         def install
           bin.install "delstack"
