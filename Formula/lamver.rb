@@ -5,20 +5,20 @@
 class Lamver < Formula
   desc "lamver"
   homepage "https://github.com/go-to-k/lamver"
-  version "0.16.0"
+  version "0.17.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/go-to-k/lamver/releases/download/v0.16.0/lamver_0.16.0_Darwin_x86_64.tar.gz"
-      sha256 "64b3b5c4ae193ae472b40df7ee334454d15cc324fd87ef54d4146502364d62bd"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.17.0/lamver_0.17.0_Darwin_x86_64.tar.gz"
+      sha256 "f4494603bac69d2d72fd54e785e4456b6778acabb961289bd244ffdc97f03449"
 
       def install
         bin.install "lamver"
       end
     end
     on_arm do
-      url "https://github.com/go-to-k/lamver/releases/download/v0.16.0/lamver_0.16.0_Darwin_arm64.tar.gz"
-      sha256 "dcfd126495cda5a9251d6e8670e74fadad28e72d8d1fa5cdc1f6d812878db005"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.17.0/lamver_0.17.0_Darwin_arm64.tar.gz"
+      sha256 "51bcf4a7977b5305ca8714e25c97fe0c0f6ca1efa2ed476b3cd61652a112b57f"
 
       def install
         bin.install "lamver"
@@ -29,8 +29,8 @@ class Lamver < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/lamver/releases/download/v0.16.0/lamver_0.16.0_Linux_x86_64.tar.gz"
-        sha256 "c32cfd65e463b77e2e983571bded8bd2057bdce57aa8e71069f8dead1b70f5ce"
+        url "https://github.com/go-to-k/lamver/releases/download/v0.17.0/lamver_0.17.0_Linux_x86_64.tar.gz"
+        sha256 "76218c417ad9686de706c5f04a15dbbef94a55d576f7900d91d5d4c745555adc"
 
         def install
           bin.install "lamver"
@@ -39,8 +39,8 @@ class Lamver < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/lamver/releases/download/v0.16.0/lamver_0.16.0_Linux_arm64.tar.gz"
-        sha256 "29568c35c88682f948eb575c74e071449e6250f9010ca4882eae9291e554aeb0"
+        url "https://github.com/go-to-k/lamver/releases/download/v0.17.0/lamver_0.17.0_Linux_arm64.tar.gz"
+        sha256 "5b75294f017e9e126e43279d8dd8e016c957f1ca1e50fe122c6ecf2c8f89c591"
 
         def install
           bin.install "lamver"
