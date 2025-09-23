@@ -5,20 +5,20 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.27.1"
+  version "0.28.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.27.1/cls3_0.27.1_Darwin_x86_64.tar.gz"
-      sha256 "7d77277aac8ef8d5d93e1d3c15a1a533ca7dee79d95009c2a8c699ed42f40a1a"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.28.0/cls3_0.28.0_Darwin_x86_64.tar.gz"
+      sha256 "4459f31c757607038560048865a4f23796adcfcb77fdd2eae4b5d4eff2862a6d"
 
       def install
         bin.install "cls3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.27.1/cls3_0.27.1_Darwin_arm64.tar.gz"
-      sha256 "1bce3a1de6d4f63600c24d9db63559490c7cbfd0b8283784939e71cb2d8fb44d"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.28.0/cls3_0.28.0_Darwin_arm64.tar.gz"
+      sha256 "3c8ab6252956a1b8168e4d8c8c83e4fa9fecc3e42fbbb1595c0f914812ec7e4f"
 
       def install
         bin.install "cls3"
@@ -27,16 +27,16 @@ class Cls3 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.27.1/cls3_0.27.1_Linux_x86_64.tar.gz"
-      sha256 "801064f06d6476187341746379db515c3ab4517ef6d8fc2fbdbb5a223ee9c78a"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/cls3/releases/download/v0.28.0/cls3_0.28.0_Linux_x86_64.tar.gz"
+      sha256 "d61b4fc4b3c26fcfdfe7ad5602bad5414899bafa737fda8e7e7d4fee14df2375"
       def install
         bin.install "cls3"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.27.1/cls3_0.27.1_Linux_arm64.tar.gz"
-      sha256 "224d6f2b9a6af5360e5befa6aa73da0f4f67776053cb8c08cbbf142036ab3f8f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/cls3/releases/download/v0.28.0/cls3_0.28.0_Linux_arm64.tar.gz"
+      sha256 "30557840b1363ef106424eeebbdbe0a9e3c949c0c5edce1596757cf30781c503"
       def install
         bin.install "cls3"
       end
