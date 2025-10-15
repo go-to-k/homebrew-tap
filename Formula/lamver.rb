@@ -5,20 +5,20 @@
 class Lamver < Formula
   desc "lamver"
   homepage "https://github.com/go-to-k/lamver"
-  version "0.18.0"
+  version "0.18.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.18.0/lamver_0.18.0_Darwin_x86_64.tar.gz"
-      sha256 "72fe2f14fd3ceca5ec8733e21ae06d14ea21a13cfcd8af089d07198280e30888"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.18.1/lamver_0.18.1_Darwin_x86_64.tar.gz"
+      sha256 "bf1afdda7abcf0b14ad53d2cd280097f177beed1a44f27017c4e080be68f93a9"
 
       def install
         bin.install "lamver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.18.0/lamver_0.18.0_Darwin_arm64.tar.gz"
-      sha256 "b639c688f5e0f2ccc505b5e5ba2adb6e95559f4d4d1b9251fec5996f3196a6d0"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.18.1/lamver_0.18.1_Darwin_arm64.tar.gz"
+      sha256 "f339e0e53705679b0388cc1d7675eeea6adc8302fb138eefc0ce3b69b4105e69"
 
       def install
         bin.install "lamver"
@@ -27,24 +27,18 @@ class Lamver < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/lamver/releases/download/v0.18.0/lamver_0.18.0_Linux_x86_64.tar.gz"
-        sha256 "82574e7966f4805bb1f84be57ea0b760e588e989349fc842d126a5555a6c9ad9"
-
-        def install
-          bin.install "lamver"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.18.1/lamver_0.18.1_Linux_x86_64.tar.gz"
+      sha256 "5811bd2f20e2cec35fb2145c8c2ca36b4fdaaa44a7cb6b6380a3cb27a049ff5a"
+      def install
+        bin.install "lamver"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/go-to-k/lamver/releases/download/v0.18.0/lamver_0.18.0_Linux_arm64.tar.gz"
-        sha256 "cc4279468080fdab343398b333d0832a7428acf106818957ad5511fbbd7f2cb5"
-
-        def install
-          bin.install "lamver"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/go-to-k/lamver/releases/download/v0.18.1/lamver_0.18.1_Linux_arm64.tar.gz"
+      sha256 "88286822171d00e082f17b9abc5e8c239bba33c4961b1281dd8ce537d075793a"
+      def install
+        bin.install "lamver"
       end
     end
   end
