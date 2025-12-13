@@ -5,20 +5,20 @@
 class Delstack < Formula
   desc "delstack"
   homepage "https://github.com/go-to-k/delstack"
-  version "2.1.0"
+  version "2.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.1.0/delstack_2.1.0_Darwin_x86_64.tar.gz"
-      sha256 "d29976335dbc798b83e3100aacb97ccd59a6859237a5002fc5bf8291682e1221"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.1.1/delstack_2.1.1_Darwin_x86_64.tar.gz"
+      sha256 "6d91802e0e540dc1bf4217be9d3773d55602e9446b28071bff1abfa88d44aeed"
 
       def install
         bin.install "delstack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.1.0/delstack_2.1.0_Darwin_arm64.tar.gz"
-      sha256 "87abf13ca3c969f9ac667c0af72c754674357bd47686b68f82bf69138da16e0e"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.1.1/delstack_2.1.1_Darwin_arm64.tar.gz"
+      sha256 "02ad1a437f67e7d114292cf9f85eaefe6375e228b70fae76551b95022405c62f"
 
       def install
         bin.install "delstack"
@@ -28,15 +28,15 @@ class Delstack < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.1.0/delstack_2.1.0_Linux_x86_64.tar.gz"
-      sha256 "9874ed92df4f3f182e0f4f9eea405b5ccbeea28ec1f876357a8c86f9fd2d3b47"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.1.1/delstack_2.1.1_Linux_x86_64.tar.gz"
+      sha256 "6978d8ad540d0bab32a6813d2a589f6182f44b2c2c1b95c187987ff26b64a45c"
       def install
         bin.install "delstack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.1.0/delstack_2.1.0_Linux_arm64.tar.gz"
-      sha256 "f1a4989dfaf4865ebf9f16443f625b128c930f2c3cc467db5876c2dedf871e11"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.1.1/delstack_2.1.1_Linux_arm64.tar.gz"
+      sha256 "dc7947cb94e7933539606e63b00d2dd01cda7742a903fc3096a47d8184776956"
       def install
         bin.install "delstack"
       end
