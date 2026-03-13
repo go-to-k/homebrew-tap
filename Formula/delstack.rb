@@ -5,20 +5,20 @@
 class Delstack < Formula
   desc "delstack"
   homepage "https://github.com/go-to-k/delstack"
-  version "2.3.0"
+  version "2.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.3.0/delstack_2.3.0_Darwin_x86_64.tar.gz"
-      sha256 "ad9831a98f47213cc128323500c495d653378f351602af73289953aacde7ebcb"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.3.1/delstack_2.3.1_Darwin_x86_64.tar.gz"
+      sha256 "5d94f0f4d2d02b4b5a9b3f4596e92abab0327b9338b00c901d4a333a5a19b99f"
 
       define_method(:install) do
         bin.install "delstack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.3.0/delstack_2.3.0_Darwin_arm64.tar.gz"
-      sha256 "02a49272115bc6d9449aa28ab47aaba66f670d519f619af531402364bed24ab6"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.3.1/delstack_2.3.1_Darwin_arm64.tar.gz"
+      sha256 "a3b501c13bde25a678cc778a6e6508d2a1ea0cef185db3b461bad836f20ff1fc"
 
       define_method(:install) do
         bin.install "delstack"
@@ -28,15 +28,15 @@ class Delstack < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.3.0/delstack_2.3.0_Linux_x86_64.tar.gz"
-      sha256 "d087f8591e4d33cfb26ae6b1afd3049b135220f84c3cc90bc7dbb36e119f5821"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.3.1/delstack_2.3.1_Linux_x86_64.tar.gz"
+      sha256 "297265a76a0b8fd5283b48edb1d5dd64b288735b8fc9b13a21ef7634c4e7eef5"
       define_method(:install) do
         bin.install "delstack"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/delstack/releases/download/v2.3.0/delstack_2.3.0_Linux_arm64.tar.gz"
-      sha256 "39505b801b0cb77f08d4a38ab63d45e6dbbec0ae3a6944bed6906cb9fa890518"
+      url "https://github.com/go-to-k/delstack/releases/download/v2.3.1/delstack_2.3.1_Linux_arm64.tar.gz"
+      sha256 "566358140edc78ebfb379a4d1afb0b83e26abaf7d998e1652cc4e6af50c8d78a"
       define_method(:install) do
         bin.install "delstack"
       end
