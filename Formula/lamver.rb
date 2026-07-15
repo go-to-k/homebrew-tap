@@ -5,20 +5,20 @@
 class Lamver < Formula
   desc "lamver"
   homepage "https://github.com/go-to-k/lamver"
-  version "0.22.0"
+  version "0.23.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.22.0/lamver_0.22.0_Darwin_x86_64.tar.gz"
-      sha256 "a2e4f26b18c41981c992781adef997ab4cc4d645f031eb3ef1e7d680f3457e1f"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.23.0/lamver_0.23.0_Darwin_x86_64.tar.gz"
+      sha256 "a96a150a4f095d6b40503f83f30daaea7f1b1b0bb994122ae8e1dc363450feff"
 
       define_method(:install) do
         bin.install "lamver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.22.0/lamver_0.22.0_Darwin_arm64.tar.gz"
-      sha256 "b334a162aa2929913824a73e8e8b75112e229c8acdd32429afb2dfe2ac0f8796"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.23.0/lamver_0.23.0_Darwin_arm64.tar.gz"
+      sha256 "3a2b0ca05e3a18a317b06c753bca7833a8f2cd9d731a51bf3dc4efb023e55934"
 
       define_method(:install) do
         bin.install "lamver"
@@ -28,15 +28,15 @@ class Lamver < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.22.0/lamver_0.22.0_Linux_x86_64.tar.gz"
-      sha256 "90d2c1b53943b6c79108ec16ed493d8e44465f9e4f31fea6169041a8ec5b6aca"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.23.0/lamver_0.23.0_Linux_x86_64.tar.gz"
+      sha256 "aa0d781759be6dee6dede0e3bf2d4977a4a3a72845237f10c7f647476ceaeca4"
       define_method(:install) do
         bin.install "lamver"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/lamver/releases/download/v0.22.0/lamver_0.22.0_Linux_arm64.tar.gz"
-      sha256 "2783e53d23dc1b6ba518ee3e6d2658200529d2ce012e08ff415460833b074ea5"
+      url "https://github.com/go-to-k/lamver/releases/download/v0.23.0/lamver_0.23.0_Linux_arm64.tar.gz"
+      sha256 "75bb4e2df9f7fec94ebea2e8f773ef70c182709673ee8b1b557b5318d37c4c3a"
       define_method(:install) do
         bin.install "lamver"
       end
