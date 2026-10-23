@@ -5,22 +5,22 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.32.4"
+  version "0.32.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.4/cls3_0.32.4_Darwin_x86_64.tar.gz"
-      sha256 "73bdb0040150238ac15714874b59041b41a0cf747d0b8bedf1cc52c326a6b87e"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Darwin_x86_64.tar.gz"
+      sha256 "2a5955828ae134bdc938b651d8fbcc553858e4dbdf70aca9ba47e1d10756f803"
 
-      def install
+      define_method(:install) do
         bin.install "cls3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.4/cls3_0.32.4_Darwin_arm64.tar.gz"
-      sha256 "e1dd81e4bd4fc40fe8d8c2db279b231f9cb7858065858a26a2a08edb8c692458"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Darwin_arm64.tar.gz"
+      sha256 "ed0f612a92d03680de3d247683c26a5f8e40ddc48ea4b4ab016fec7765f7e4ba"
 
-      def install
+      define_method(:install) do
         bin.install "cls3"
       end
     end
@@ -28,16 +28,16 @@ class Cls3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.4/cls3_0.32.4_Linux_x86_64.tar.gz"
-      sha256 "185dbdff5e00f7dcdf0ec8d0741f9b8c8ceca710a7798ed9f19a8971fd201613"
-      def install
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Linux_x86_64.tar.gz"
+      sha256 "c287bbcaeab8b3adc1ad0f3c15b68b7620ff0f9147bb1ead821d079130974155"
+      define_method(:install) do
         bin.install "cls3"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.4/cls3_0.32.4_Linux_arm64.tar.gz"
-      sha256 "dc415ea8a9516f0ccceccaf67f38c0f80ba08179181eb8ceefe705cc1595443d"
-      def install
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Linux_arm64.tar.gz"
+      sha256 "994e2a55bcc13d91a132564ab7b2abba65109f175b9a8b1089d91edf25499d28"
+      define_method(:install) do
         bin.install "cls3"
       end
     end
