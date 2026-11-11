@@ -5,20 +5,20 @@
 class Cls3 < Formula
   desc "cls3"
   homepage "https://github.com/go-to-k/cls3"
-  version "0.32.5"
+  version "0.32.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Darwin_x86_64.tar.gz"
-      sha256 "2a5955828ae134bdc938b651d8fbcc553858e4dbdf70aca9ba47e1d10756f803"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.6/cls3_0.32.6_Darwin_x86_64.tar.gz"
+      sha256 "e1407d8ce9a4b43e241195d77c99dc46290212c21f51f20204d56caeb8449361"
 
       define_method(:install) do
         bin.install "cls3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Darwin_arm64.tar.gz"
-      sha256 "ed0f612a92d03680de3d247683c26a5f8e40ddc48ea4b4ab016fec7765f7e4ba"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.6/cls3_0.32.6_Darwin_arm64.tar.gz"
+      sha256 "b9a65e7a06c20de01b2fc434aecc50e3b4d013be17eabd01e4d970b58f8dc114"
 
       define_method(:install) do
         bin.install "cls3"
@@ -28,15 +28,15 @@ class Cls3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Linux_x86_64.tar.gz"
-      sha256 "c287bbcaeab8b3adc1ad0f3c15b68b7620ff0f9147bb1ead821d079130974155"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.6/cls3_0.32.6_Linux_x86_64.tar.gz"
+      sha256 "2607e62826f4c64f62653ad831e0ef5704f259c685fc83a238d4f478823cf6d5"
       define_method(:install) do
         bin.install "cls3"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/go-to-k/cls3/releases/download/v0.32.5/cls3_0.32.5_Linux_arm64.tar.gz"
-      sha256 "994e2a55bcc13d91a132564ab7b2abba65109f175b9a8b1089d91edf25499d28"
+      url "https://github.com/go-to-k/cls3/releases/download/v0.32.6/cls3_0.32.6_Linux_arm64.tar.gz"
+      sha256 "58c95007ddaf18fde653db90fb7933053a91a5f74eed880d7910fa999b0d6b52"
       define_method(:install) do
         bin.install "cls3"
       end
